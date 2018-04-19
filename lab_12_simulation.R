@@ -9,4 +9,4 @@ model_select = function(covariates, responses, cutoff){
   again = summary(lm(responses~covariates[,indices]))$coefficients[,4][summary(lm(responses~covariates[,indices]))$coefficients[,4] <= cutoff]
   if (length(again == 0)){
    return(c())}
-    }
+    }.patch
