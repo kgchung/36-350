@@ -1,2 +1,2 @@
 # 36-350
-statistical coputing
+statistical computing
