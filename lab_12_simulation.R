@@ -15,6 +15,7 @@ model_select = function(covariates, responses, cutoff){
 run_simulation = function(n_trials, n, p, cutoff){
    data = generate_data(n,p)
    selectdata = model_select(data[[1]], data[[2]], cutoff)
-   datapat= coef(selectdat[[1:2
+   datapath= coef(selectdat[[1:2]
 }
-make_plot function(datapath0.patch
+make_plot function(datapath){
+  hist(rep(selectdata, n_trials)).patch
