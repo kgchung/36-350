@@ -10,4 +10,10 @@ model_select = function(covariates, responses, cutoff){
   again = summary(lm(responses~covariates[,indices]))$coefficients[,4][summary(lm(responses~covariates[,indices]))$coefficients[,4] <= cutoff]
   if (length(again == 0)){
    return(c())}
-    }.patch
+    }
+    
+run_simulation = function(n_trials, n, p, cutoff){
+   data = generate_data(n,p)
+   selectdata = model_select(data[[1]], data[[2]], cutoff)
+   hist(rep(selectdata, n_trials))
+}.patch
